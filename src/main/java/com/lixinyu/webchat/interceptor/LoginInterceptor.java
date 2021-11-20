@@ -23,7 +23,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         //获取URI后缀
         String requestUri = request.getServletPath();
 
-        if(requestUri.equalsIgnoreCase("/") || requestUri.equalsIgnoreCase("/user/regist") || requestUri.equalsIgnoreCase("/user/insert"))    return true;
+        if(requestUri.equalsIgnoreCase("/") )    return true;
 
         //过滤不需要拦截的地址
         for (String uri : IGNORE_URI) {

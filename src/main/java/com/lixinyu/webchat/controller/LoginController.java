@@ -35,10 +35,7 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping(value = "/regist", method = RequestMethod.GET)
-    public String regist() {
-        return "regist";
-    }
+
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(String userid, String password, HttpSession session, RedirectAttributes attributes,
@@ -76,16 +73,5 @@ public class LoginController {
         return "redirect:/user/login";
     }
 
-    @RequestMapping(value = "/insert",method = RequestMethod.POST)
-    @ResponseBody
-    public Boolean regist(@RequestParam("userid") String userid, @RequestParam("password") String password){
-        User user = new User();
-        user.setPassword(password);
-        user.setUserid(userid);
-        user.setStatus(1);
-        boolean flag = userService.insert(user);
-        if(flag){
-            return true;
-        }else return false;
-    }
+
 }

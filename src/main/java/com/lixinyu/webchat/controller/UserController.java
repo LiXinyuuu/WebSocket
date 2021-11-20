@@ -52,6 +52,17 @@ public class UserController {
     }
 
     /**
+     * 显示系统设置
+     */
+    @RequestMapping(value = "{userid}/system-setting", method = RequestMethod.GET)
+    public ModelAndView selectUserSettingByUserid(@PathVariable("userid") String userid, @ModelAttribute("userid") String sessionid){
+        ModelAndView view = new ModelAndView("system-setting");
+        user = userService.selectUserByUserid(userid);
+        view.addObject("user", user);
+        return view;
+    }
+
+    /**
      * 显示个人信息编辑页面
      * @param userid
      * @param sessionid
@@ -122,6 +133,7 @@ public class UserController {
     public String upload(@PathVariable("userid") String userid, MultipartFile file, HttpServletRequest request, UploadUtil uploadUtil,
                          RedirectAttributes attributes, NetUtil netUtil, LogUtil logUtil, CommonDate date, WordDefined defined){
         try{
+            String originalFilename = file.getOriginalFilename();
             String fileurl = uploadUtil.upload(request, "upload", userid);
             user = userService.selectUserByUserid(userid);
             user.setProfilehead(fileurl);
@@ -170,4 +182,22 @@ public class UserController {
 
 
 
+    @RequestMapping(value = "/insert",method = RequestMethod.POST)
+    @ResponseBody
+    public Boolean regist(@RequestParam("userid") String userid, @RequestParam("password") String password){
+        User user = new User();
+        user.setPassword(password);
+        user.setUserid(userid);
+        user.setStatus(1);
+        boolean flag = userService.insert(user);
+        if(flag){
+            return true;
+        }else return false;
+    }
+
+
+    @RequestMapping(value = "/regist", method = RequestMethod.GET)
+    public String regist() {
+        return "regist";
+    }
 }

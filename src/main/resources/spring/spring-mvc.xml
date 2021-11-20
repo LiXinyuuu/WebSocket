@@ -33,6 +33,8 @@
                     <list>
                         <value>/user/login</value>
                         <value>/user/logout</value>
+                        <value>/insert</value>
+                        <value>/regist</value>
                     </list>
                 </property>
             </bean>

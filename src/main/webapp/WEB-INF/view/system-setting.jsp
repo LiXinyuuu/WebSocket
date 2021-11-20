@@ -27,7 +27,7 @@
 
             <div class="am-tabs-bd">
                 <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-                    <form class="am-form am-form-horizontal">
+                    <form class="am-form am-form-horizontal"  >
                         <div class="am-form-group">
                             <label class="am-u-sm-2 am-form-label">分页大小</label>
                             <div class="am-u-sm-10">
@@ -100,7 +100,7 @@
                 <div class="am-tab-panel am-fade" id="tab2">
                     <form class="am-form am-form-horizontal" style="text-align: center;">
                         <div style="text-align: center;margin-bottom: 10px">
-                            <img class="am-circle" src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80" width="140" height="140" alt="Amayadream"/>
+                            <img class="am-circle" src="${ctx}/${userid}/head" width="140" height="140" />
                         </div>
                         <div class="am-form-group am-form-file">
                             <button type="button" class="am-btn am-btn-secondary am-btn-sm">
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="am-tab-panel am-fade" id="tab3">
-                    <form class="am-form am-form-horizontal">
+                    <form class="am-form am-form-horizontal" data-am-validator action="${ctx}/${userid}/pass">
                         <div class="am-form-group">
                             <label for="password1" class="am-u-sm-2 am-form-label">原密码</label>
                             <div class="am-u-sm-10">

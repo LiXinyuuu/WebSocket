@@ -57,7 +57,7 @@
 <jsp:include page="include/footer.jsp"/>
 
 <script>
-    $(function () {
+    $(function () {    //jquery的文档就绪函数简写
         context.init({preventDoubleContext: false});
         context.settings({compress: true});
         context.attach('#chat-view', [

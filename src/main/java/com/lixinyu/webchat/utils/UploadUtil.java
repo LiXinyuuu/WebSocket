@@ -50,6 +50,7 @@ public class UploadUtil {
                         //定义上传路径,格式为 upload/lixinyu/lixinyu.jpg
                         String path = request.getServletContext().getRealPath("/") + folder + "/" + userid;
                         File localFile = new File(path, fileName);
+
                         if(!localFile.exists()){
                             localFile.mkdirs();
                         }
@@ -59,6 +60,7 @@ public class UploadUtil {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+
                     }
                 }
             }

@@ -61,7 +61,7 @@
     });
 
     $('#username,#password').change(function(){
-      $('#submit').attr('value','Login').css('background','#3ea751');
+      $('#submit').attr('value','Regist').css('background','#3ea751');
     });
   });
 
@@ -89,7 +89,7 @@
     //	return false;
     //}
     else{
-      $('#submit').attr('value','Logining~');
+      $('#submit').attr('value','registing~');
       return true;
     }
   }
@@ -117,8 +117,9 @@
       dataType:"json",
       success:function(res){
         if(res){
-          layer.alert("注册成功")
-        }else layer.alert("注册失败")
+          layer.msg("注册成功")
+          window.location.href = "/user/login";
+        }else layer.msg("注册失败")
 
       }});
   });

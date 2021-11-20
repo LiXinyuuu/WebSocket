@@ -20,7 +20,6 @@
             <ul class="am-tabs-nav am-nav am-nav-tabs">
                 <li class="am-active"><a href="#tab1">所用技术</a></li>
                 <li><a href="#tab2">获取源码</a></li>
-                <li><a href="#tab3">关于作者</a></li>
             </ul>
             <div class="am-tabs-bd">
                 <div class="am-tab-panel am-fade am-in am-active" id="tab1">
@@ -36,17 +35,11 @@
                 <div class="am-tab-panel am-fade am-in" id="tab2">
                     <hr>
                     <blockquote>
-                        <p><a href="https://github.com/Amayadream/WebChat" target="_blank">https://github.com/Amayadream/WebChat</a></p>
+                        <p><a href="https://gitee.com/Lixinyuu/web-chat" target="_blank">https://gitee.com/Lixinyuu/web-chat</a></p>
                     </blockquote>
                 </div>
 
-                <div class="am-tab-panel am-fade am-in" id="tab3">
-                    <hr>
-                    <blockquote>
-                        <p>欢迎访问我的个人网站<a href="http://www.amayadream.com" target="_blank">Amayadream.com</a>,虽然并没有什么东西可看</p>
-                        <p>也欢迎访问我的github, <a href="https://github.com/Amayadream" target="_blank">github.com/Amayadream</a></p>
-                    </blockquote>
-                </div>
+
             </div>
         </div>
         <!-- content end -->

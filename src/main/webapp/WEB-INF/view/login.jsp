@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>WebChat</h1>
+<h1>LxyWebChat</h1>
 <div class="login-form">
   <div class="close"> </div>
   <div class="head-info">
@@ -112,7 +112,7 @@
   }
 
   function regist(){
-    window.location.href = "regist";
+    window.location.href = "/regist";
   }
 </script>
 </body>
