@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.service
  * Author :  lixinyu
- * Date   :  2016.01.09 16:42
+ * Date   :  2021.11.09 16:42
  * TODO   :
  */
 public interface ILogService {

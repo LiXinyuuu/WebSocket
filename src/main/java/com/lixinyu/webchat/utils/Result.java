@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * 公共返回类
  * @author :  lixinyu
- * @time :  2016.01.30 13:57
+ * @time :  2021.11.30 13:57
  */
 public class Result extends HashMap {
     public static final int SUCCESS = 0;

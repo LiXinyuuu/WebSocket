@@ -15,8 +15,8 @@ import org.apache.commons.pool.impl.GenericObjectPool;
 import org.junit.Test;
 
 /**
- * @author :  liixnyu
- * @date :  2016.04.06 20:17
+ * @author :  lixinnyu
+ * @date :  2021.04.06 20:17
  */
 public class PoolManager {
     private static String driver = "com.mysql.jdbc.Driver";

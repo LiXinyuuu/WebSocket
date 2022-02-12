@@ -22,7 +22,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 @ServerEndpoint(value = "/chatServer", configurator = HttpSessionConfigurator.class) //@ServerEndpoint 注解是一个类层次的注解，它的功能主要是将目前的类定义成一个websocket服务器端。注解的值将被用于监听用户连接的终端访问URL地址。
 public class ChatServer {
     private static int onlineCount = 0; //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
-    private static CopyOnWriteArraySet<ChatServer> webSocketSet = new CopyOnWriteArraySet<ChatServer>(); //存放所有的session
+    private static CopyOnWriteArraySet<ChatServer> webSocketSet = new CopyOnWriteArraySet<ChatServer>(); //存放所有的session,广播消息给所有人发送 使用。
     private Session session;    //与某个客户端的连接会话，需要通过它来给客户端发送数据
     private String userid;      //用户名
     private HttpSession httpSession;    //request的session
@@ -42,7 +42,7 @@ public class ChatServer {
         this.httpSession = (HttpSession) config.getUserProperties().get(HttpSession.class.getName());
         this.userid=(String) httpSession.getAttribute("userid");    //获取当前用户
         list.add(userid);           //将用户名加入在线列表
-        routetab.put(userid, session);   //将用户名和session绑定到路由表
+        routetab.put(userid, session);   //将用户名和session绑定到路由表，发送消息使用
         String message = getMessage("[" + userid + "]加入聊天室,当前在线人数为"+getOnlineCount()+"位", "notice",  list);
         broadcast(message);     //广播
     }

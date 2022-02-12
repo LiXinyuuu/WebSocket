@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.dao
  * Author :  lixinyu
- * Date   :  2016.01.09 16:39
+ * Date   :  2021.11.09 16:39
  */
 @Service(value = "logDao")
 public interface ILogDao {

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.serviceImpl
  * Author :  lixinyu
- * Date   :  2016.01.09 16:43
+ * Date   :  2021.11.09 16:43
  * TODO   :
  */
 @Service(value = "logService")

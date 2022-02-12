@@ -3,7 +3,7 @@ package com.lixinyu.webchat.utils;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.utils
  * Author :  lixinyu
- * Date   :  2016.01.09 17:18
+ * Date   :  2021.11.09 17:18
  * TODO   :
  */
 public class WordDefined {

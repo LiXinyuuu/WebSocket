@@ -13,7 +13,7 @@
 
 <h1>LxyWebChat</h1>
 <div class="login-form">
-  <div class="close"> </div>
+<%--  <div class="close"> </div>--%>
   <div class="head-info">
     <label class="lbl-1"></label>
     <label class="lbl-2"></label>
@@ -31,9 +31,9 @@
     </div>
     <div class="signin">
       <input type="submit" id="submit" value="Login" >
-      <div class="regist">
-        <button style="color: green" onclick="regist()">注册</button>
-      </div>
+    </div>
+    <div >
+      <button id="regist" style="color: green" onclick="register()">注册</button>
     </div>
   </form>
 </div>
@@ -66,6 +66,8 @@
     $('#username,#password').change(function(){
       $('#submit').attr('value','Login').css('background','#3ea751');
     });
+
+
   });
 
   /**
@@ -111,9 +113,22 @@
     }
   }
 
-  function regist(){
+  function register(){
     window.location.href = "/regist";
   }
 </script>
 </body>
+<style>
+  #regist{
+    font-size: 30px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #3ea757;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+</style>
 </html>
+

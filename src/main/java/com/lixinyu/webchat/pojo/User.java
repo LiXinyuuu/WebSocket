@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.pojo
  * Author :  lixinyu
- * Date   :  2016.01.08 14:06
+ * Date   :  2021.11.08 14:06
  * TODO   :
  */
 @Repository(value = "user")

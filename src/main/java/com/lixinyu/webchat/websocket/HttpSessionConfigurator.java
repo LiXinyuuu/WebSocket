@@ -8,7 +8,7 @@ import javax.websocket.server.ServerEndpointConfig;
 /**
  * NAME   :  WebChat/com.lixinyu.webchat.websocket
  * Author :  Lixinyu
- * Date   :  2016.01.12 17:10
+ * Date   :  2021.11.12 17:10
  * TODO   :
  */
 public class HttpSessionConfigurator extends ServerEndpointConfig.Configurator  {
